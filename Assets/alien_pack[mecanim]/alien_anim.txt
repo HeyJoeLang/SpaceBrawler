@@ -1,0 +1,55 @@
+0-30 antisipation
+30-60 picking up ball
+65-90 catching
+90-130 dropping ball
+135-165 chasing ball
+180-240 standing
+240-330 exposing belly
+330-490 turning 180
+490-600 begging for food
+600-700 eating
+700-780 drinking
+780-900 pooping/peeing
+900-930 puking
+940-980 walk normal
+990-1020 run
+1030-1060 turn left
+1060-1090 turn right
+1100-1140 move left
+1150-1190 move right
+1200-1240 move back
+1250-1290 jump low
+1290-1350 jump high
+1350-1430 standing on two legs
+1430-1530 licking
+1530-1630 rolling on floor
+1640-1690 pulling rope
+1700-1800 chasing tail
+1800-1900 excited
+1900-1960 barking
+1960-2020 scratching
+2030-2110 sex
+2120-2200 sniffing (low)
+2200-2300 sniffing (high)
+2300-2400 digging
+2410-2450 walk cautiously
+2460-2520 growling
+2530-2580 stalking prey
+2590-2670 scratching
+2680-2720 sitting
+2720-2840 sitting and looking
+2850-2900 lay down (back)
+2900-2950 lay idle (back)
+2950-3000 get up (back)
+3000-3050 lay down (front)
+3050-3100 lay idle (front)
+3100-3150 Get up (front)
+3150-3200 scratching 1
+3200-3250 scratching 2
+3250-3300 scratching 3
+3300-3400 shaking
+3410-3450 limping
+3460-3520 walk slow
+3530-3600 die fast
+3610-3720 die slow
+3730-5360 aditional

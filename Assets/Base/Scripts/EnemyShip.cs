@@ -104,19 +104,6 @@ public class EnemyShip : MonoBehaviour
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<MeshCollider>().enabled = false;
         Destroy(gameObject, 2);
-        FindObjectOfType<GameplayScoreboard>().GetComponent<GameplayScoreboard>().IncreaseScore();
+       GameplayScoreboard.Instance.IncreaseScore();
     }
-    /*
-    public void Bounce()
-    {
-        Vector3 direction = (wanderTarget - transform.position).normalized;
-        transform.position += direction * speed * Time.deltaTime;
-    }
-
-    public void StartBounce(Vector3 contactPostion)
-    {
-        Vector3 bounceDirection = contactPostion + transform.position.normalized;
-        SetWanderPosition(bounceDirection);
-    }
-    */
 }

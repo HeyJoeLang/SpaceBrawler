@@ -1,120 +1,243 @@
-using Meta.XR.MRUtilityKit;
 using System.Collections;
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+[RequireComponent(typeof(AudioSource))]
+public class GameController : Singleton<GameController>
 {
-    public float boxingTime = 120.0f;
-    public GameObject controllerLeftModel, controllerRightModel;
-    public GameObject punchGunLeft, punchGunRight;
-    public EnemySpawner enemySpawner;
-    public AudioClip boxingBell;
-    public GameObject StartMenu;
-    public GameObject Ceiling;
-    public StartBoxingGlove startBoxingGlove;
-    public GameplayScoreboard scoreboard;
-    public Animator fade;
-    public ParticleSystem[] transfromParticles;
-    public GameObject auroraParticles;
-    AudioSource audioSource;
+    #region Variables
 
-    //public OVRScreenFade screenFade;
-    void Start()
+    [Header("Toggle Game Objects")]
+    [SerializeField] private GameObject controllerLeftModel;
+    [SerializeField] private GameObject controllerRightModel;
+    [SerializeField] private GameObject punchGunLeft;
+    [SerializeField] private GameObject punchGunRight;
+    [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private GameObject startMenu;
+    [SerializeField] private StartBoxingGlove startBoxingGlove;
+    [SerializeField] private GameplayScoreboard scoreboard;
+    [SerializeField] private ParticleSystem auroraParticles;
+    [SerializeField] private GameObject ceiling;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip boxingBell;
+    [SerializeField] private AudioClip menuBackgroundMusic;
+    [SerializeField] private AudioClip boxingBackgroundMusic;
+    private AudioSource audioSource;
+
+    [Header("UI")]
+    [SerializeField] private Button button_PlayGame;
+    [SerializeField] private Button button_Restart;
+    [SerializeField] private Button button_Quit;
+    [SerializeField] private GameObject timeRemainingParent;
+    [SerializeField] private GameObject endGameUI;
+
+    private float boxingDuration = 120.0f;
+    private float boxingTimeLeft = 120.0f;
+
+    private const float StartBoxingGloveOffsetY = 3.0f;
+    private const float ScoreboardOffsetY = 0.25f;
+    private const float StartMenuShrinkDelay = 2.0f;
+
+    private Animator startMenuAnimator;
+
+    private enum State
     {
-        audioSource = GetComponent<AudioSource>();
+        Main_Menu,
+        Start_Hit_Glove,
+        Update_Hit_Glove,
+        Start_Boxing,
+        Update_Boxing,
+        End_Boxing,
+        Finished
+    }
+    private State gameState = State.Main_Menu;
+
+    #endregion
+    #region UnityFunctions
+
+    private void Start()
+    {
+        CacheReferences();
         StartCoroutine(WaitForRoomCreation());
+        audioSource.loop = true;
+        audioSource.playOnAwake = true;
+        audioSource.clip = menuBackgroundMusic;
     }
-    IEnumerator WaitForRoomCreation()
-    {
-        int attempts = 3;
-        while (Ceiling == null || attempts == 0)
-        {
-            Ceiling = GameObject.Find("CEILING");
-            if (Ceiling != null)
-            {
-                break;
-            }
-            yield return new WaitForSeconds(1);
-            attempts--;
-        }
-        CenterObjectInRoom(StartMenu.transform);
-        CenterObjectInRoom(scoreboard.transform);
-    }
-    void CenterObjectInRoom(Transform objectToCenter)
-    {
-        objectToCenter.position = new Vector3(Ceiling.transform.position.x, objectToCenter.position.y, Ceiling.transform.position.z);
 
-        //Rotate towards player
-        Vector3 cameraPosition = Camera.main.transform.position;
-        Vector3 directionToCamera = objectToCenter.position - cameraPosition;
-        directionToCamera.y = 0;
-        if (directionToCamera.sqrMagnitude > 0.0f)
+    void OnEnable()
+    {
+        AddListeners();
+    }
+    void OnDisable()
+    {
+        RemoveListeners();
+    }
+    private void Update()
+    {
+        switch (gameState)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(directionToCamera);
-            objectToCenter.rotation = targetRotation;
+            case State.Start_Boxing:
+                StartBoxing();
+                break;
+            case State.Start_Hit_Glove:
+                StartHitGlove();
+                break;
+            case State.Update_Hit_Glove:
+                UpdateHitGlove();
+                break;
+            case State.Update_Boxing:
+                UpdateBoxing();
+                break;
+            case State.End_Boxing:
+                EndBoxing();
+                break;
+            case State.Finished:
+                Finished();
+                break;
         }
     }
-    IEnumerator TransformControllers()
+
+    #endregion
+    #region StateFunctions
+
+    private void StartHitGlove()
     {
-        for (int i = 0; i < transfromParticles.Length; i++)
-        {
-            transfromParticles[i].gameObject.SetActive(true);
-            transfromParticles[i].Play();
-        }
-        yield return new WaitForSeconds(2);
-        for (int i = 0; i < transfromParticles.Length; i++)
-        {
-            transfromParticles[i].gameObject.SetActive(false);
-        }
+        audioSource.PlayOneShot(boxingBell);
+
+        startMenuAnimator.SetTrigger("Shrink");
+        Destroy(startMenu, StartMenuShrinkDelay);
+
+        startBoxingGlove.gameObject.transform.position = ceiling.transform.position + new Vector3(0, StartBoxingGloveOffsetY, 0);
+        startBoxingGlove.SetGloveTarget(startMenu.transform.position + new Vector3(0, -0.25f, 0));
+        startBoxingGlove.gameObject.SetActive(true);
+
+        gameState = State.Update_Hit_Glove;
+    }
+    void UpdateHitGlove()
+    {
+
     }
     public void StartBoxing()
     {
-        auroraParticles.SetActive(true);
-        audioSource.Stop();
-        StartCoroutine(TransformControllers());
-        scoreboard.transform.position = startBoxingGlove.transform.position + new Vector3(0, 0.25f, 0);
+        audioSource.clip = boxingBackgroundMusic;
+
+        auroraParticles.gameObject.SetActive(true);
+        ParticleSystem.MainModule main = auroraParticles.main;
+        main.startDelay = boxingDuration / 2.0f;
+        auroraParticles.Play();
+
+        boxingDuration = boxingTimeLeft = boxingBackgroundMusic.length;
+
+        scoreboard.transform.position = startBoxingGlove.transform.position + new Vector3(0, ScoreboardOffsetY, 0);
         Destroy(startBoxingGlove.gameObject);
+
         controllerLeftModel.SetActive(false);
         controllerRightModel.SetActive(false);
         punchGunLeft.SetActive(true);
         punchGunRight.SetActive(true);
         enemySpawner.gameObject.SetActive(true);
         scoreboard.gameObject.SetActive(true);
-        scoreboard.state = GameplayScoreboard.State.Start;
+        gameState = State.Update_Boxing;
     }
-    public void PlayGame()
+    private void UpdateBoxing()
     {
-        GetComponent<AudioSource>().PlayOneShot(boxingBell);
-        startBoxingGlove.transform.position = Ceiling.transform.position + new Vector3(0, 3, 0);
-        startBoxingGlove.target = StartMenu.transform.position + new Vector3(0, -0.25f, 0);
-        StartMenu.GetComponent<Animator>().SetTrigger("Shrink");
-        Destroy(StartMenu, 2.0f);
-        startBoxingGlove.gameObject.SetActive(true);
+        if (boxingTimeLeft > 0)
+        {
+            boxingTimeLeft -= Time.deltaTime;
+        }
+        else
+        {
+            boxingTimeLeft = 0;
+            gameState = State.End_Boxing;
+        }
+        GameplayScoreboard.Instance.UpdateTimerText(boxingTimeLeft);
     }
-    public void Quit()
+    private void EndBoxing()
     {
-        Application.Quit();
-    }
-    public void Reset()
-    {
-        StartCoroutine(StallReset());
-    }
-    public void EndBoxing()
-    {
-        audioSource.Play();
-        StartCoroutine(TransformControllers());
+        timeRemainingParent.SetActive(false);
+        endGameUI.SetActive(true);
+        audioSource.clip = menuBackgroundMusic;
         controllerLeftModel.SetActive(true);
         controllerRightModel.SetActive(true);
         punchGunLeft.SetActive(false);
         punchGunRight.SetActive(false);
         enemySpawner.EndGameExplodeUFOs();
 
+        timeRemainingParent.SetActive(false);
+        endGameUI.SetActive(true);
+        gameState = State.Finished;
     }
-    IEnumerator StallReset()
+
+    private void Finished()
     {
-       // screenFade.FadeOut();
-        yield return new WaitForSeconds(1.0f);
+
+    }
+
+    #endregion
+    #region UtilityFunctions
+    private void CacheReferences()
+    {
+        audioSource = GetComponent<AudioSource>();
+        startMenuAnimator = startMenu.GetComponent<Animator>();
+    }
+
+    private void AddListeners()
+    {
+        button_PlayGame.onClick.AddListener(StartHitGlove);
+        button_Restart.onClick.AddListener(Restart);
+        button_Quit.onClick.AddListener(Quit);
+        startBoxingGlove.OnGloveContact += StartBoxing;
+    }
+    private void RemoveListeners()
+    {
+        button_PlayGame.onClick.RemoveListener(StartHitGlove);
+        button_Restart.onClick.RemoveListener(Restart);
+        button_Quit.onClick.RemoveListener(Quit);
+        startBoxingGlove.OnGloveContact -= StartBoxing;
+    }
+
+    IEnumerator WaitForRoomCreation()
+    {
+        const int maxAttempts = 10;
+        int attempts = maxAttempts;
+
+        while (ceiling == null && attempts > 0)
+        {
+            ceiling = GameObject.Find("CEILING");
+            if (ceiling != null)
+            {
+                break;
+            }
+            yield return new WaitForSeconds(.5f);
+            attempts--;
+        }
+
+        if (ceiling != null)
+        {
+            CenterObjectInRoom(startMenu.transform);
+            CenterObjectInRoom(scoreboard.transform);
+        }
+    }
+
+    private void CenterObjectInRoom(Transform objectToCenter)
+    {
+        objectToCenter.position = new Vector3(ceiling.transform.position.x, objectToCenter.position.y, ceiling.transform.position.z);
+        Vector3 directionToCamera = objectToCenter.position - Camera.main.transform.position;
+        directionToCamera.y = 0;
+        objectToCenter.rotation = Quaternion.LookRotation(directionToCamera);
+    }
+
+    private void Quit()
+    {
+        Application.Quit();
+    }
+
+    private void Restart()
+    {
         SceneManager.LoadScene(0);
     }
+
+    #endregion
 }

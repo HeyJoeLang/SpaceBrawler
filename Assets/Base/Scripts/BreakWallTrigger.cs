@@ -1,12 +1,8 @@
-using Bytesized;
-using Oculus.Interaction;
 using UnityEngine;
 
 public class BreakWallTrigger : MonoBehaviour
 {
-
     public LayerMask ShardLayer;
-    public LayerMask FurnitureLayer;
     public LayerMask UFOLayer;
     public LayerMask PunchGloveLayer;
     public ParticleSystem wallExplodePrefab;
@@ -48,7 +44,7 @@ public class BreakWallTrigger : MonoBehaviour
                 {
                     body.isKinematic = false;
                     body.AddExplosionForce(ExplosionForce, transform.position, 1.0f);
-                    body.gameObject.AddComponent<AutoDestruct>().Time = 3.0f;
+                    Destroy(body, 2.0f);
                     if (isExploding == false)
                     {
                         if(hitWallClip != null)
@@ -67,15 +63,6 @@ public class BreakWallTrigger : MonoBehaviour
         {
             other.GetComponent<EnemyShip>().Explode();
         }
-        /*if (layer == ColliderUtils.LayerMaskToLayer(FurnitureLayer))
-        {
-            Debug.LogFormat("{0} hit Furniture: {1}", transform.name, other.gameObject.name);
-            if(transform.gameObject.layer == ColliderUtils.LayerMaskToLayer(UFOLayer))
-            {
-                GetComponent<EnemyShip>().StartBounce(other.ClosestPoint(transform.position));
-            }
-        }
-        */
         
     }
 }

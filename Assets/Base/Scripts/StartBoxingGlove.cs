@@ -1,12 +1,21 @@
-using System.Collections;
+using System;
 using UnityEngine;
 
 public class StartBoxingGlove : MonoBehaviour
-{
-    public Vector3 target;
-    public Transform leftController, rightController;
-    public ParticleSystem glow;
-    float rotationSpeed = 100f;
+{ 
+    public event Action OnGloveContact;
+
+    [SerializeField] private Transform leftController, rightController;
+    [SerializeField] private ParticleSystem glow;
+
+    private Vector3 target;
+    private float rotationSpeed = 100f;
+    private float minContactDistance = .75f;
+
+    public void SetGloveTarget(Vector3 targetPosition)
+    {
+        target = targetPosition;
+    }
     enum State
     {
         MovingToTarget,
@@ -52,10 +61,9 @@ public class StartBoxingGlove : MonoBehaviour
         float distanceLeft = Vector3.Distance(transform.position, leftController.position);
         float distanceRight = Vector3.Distance(transform.position, rightController.position);
 
-        if (distanceLeft < .75f ||
-            distanceRight < .75f)
+        if (distanceLeft < minContactDistance || distanceRight < minContactDistance)
         {
-            FindObjectOfType<GameController>().GetComponent<GameController>().StartBoxing();
+            OnGloveContact?.Invoke();
         }
     }
 }

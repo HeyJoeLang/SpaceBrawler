@@ -5453,12 +5453,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 122526585}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &122526587 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 9157105887693468085, guid: c4f829cb7dd4b864caf8832ec5b1ee55,
-    type: 3}
-  m_PrefabInstance: {fileID: 122526585}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &143374368
 GameObject:
   m_ObjectHideFlags: 0
@@ -5794,7 +5788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271126324}
   m_Layer: 0
-  m_Name: Barrel
+  m_Name: PunchStartTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6920,7 +6914,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootBallAction: 67108864
   ShardLayers:
-    serializedVersion: 2
     m_Bits: 0
   ExplosionRadius: 1
   ExplosionForce: 1000
@@ -12423,7 +12416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633155787}
   m_Layer: 0
-  m_Name: PunchTarget
+  m_Name: PunchEndTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13343,12 +13336,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPunchAction: 268435456
-  shotParticles: {fileID: 1095353913}
-  punchTargetTransform: {fileID: 1019977592}
-  startTransform: {fileID: 1375612509}
-  punchObject: {fileID: 72039528}
-  punchDistance: 3
+  punchEndTransform: {fileID: 1019977592}
+  punchStartTransform: {fileID: 1375612509}
+  punchGloveObject: {fileID: 72039528}
   punchTime: 0.5
+  shotParticles: {fileID: 1095353913}
   shootSound: {fileID: 8300000, guid: b0c0fd635626bbf4583af588a2e9b225, type: 3}
 --- !u!82 &690311286
 AudioSource:
@@ -13476,22 +13468,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c1428fe45e8f94c9291f335ca40db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxingTime: 120
   controllerLeftModel: {fileID: 212753899}
   controllerRightModel: {fileID: 543439251}
   punchGunLeft: {fileID: 690311283}
   punchGunRight: {fileID: 1682134107}
   enemySpawner: {fileID: 1131090540}
-  boxingBell: {fileID: 8300000, guid: 571bffad2f463404c9f5652623054b6e, type: 3}
-  StartMenu: {fileID: 1804908163}
-  Ceiling: {fileID: 0}
+  startMenu: {fileID: 1804908163}
   startBoxingGlove: {fileID: 1070294300}
   scoreboard: {fileID: 1731640194}
-  fade: {fileID: 0}
-  transfromParticles:
-  - {fileID: 122526587}
-  - {fileID: 831501398}
-  auroraParticles: {fileID: 6997551466980007344}
+  auroraParticles: {fileID: 6997551466980007345}
+  ceiling: {fileID: 0}
+  boxingBell: {fileID: 8300000, guid: 571bffad2f463404c9f5652623054b6e, type: 3}
+  menuBackgroundMusic: {fileID: 8300000, guid: acecf4f9ca9f08d42ab18480c3b06698, type: 3}
+  boxingBackgroundMusic: {fileID: 8300000, guid: 03a6210e7a586c141bb9e33f3b4537bc,
+    type: 3}
+  button_PlayGame: {fileID: 520323275}
+  button_Restart: {fileID: 352789789}
+  button_Quit: {fileID: 1761843619}
+  timeRemainingParent: {fileID: 530101811}
+  endGameUI: {fileID: 1489542877}
 --- !u!4 &708412170
 Transform:
   m_ObjectHideFlags: 0
@@ -19079,12 +19074,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
---- !u!198 &831501398 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 9157105887693468085, guid: c4f829cb7dd4b864caf8832ec5b1ee55,
-    type: 3}
-  m_PrefabInstance: {fileID: 831501397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &831501399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9157105887711818997, guid: c4f829cb7dd4b864caf8832ec5b1ee55,
@@ -24223,7 +24212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1019977592}
   m_Layer: 0
-  m_Name: PunchTarget
+  m_Name: PunchEndTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24437,9 +24426,6 @@ MonoBehaviour:
   ShardLayer:
     serializedVersion: 2
     m_Bits: 64
-  FurnitureLayer:
-    serializedVersion: 2
-    m_Bits: 256
   UFOLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -24682,9 +24668,6 @@ MonoBehaviour:
   ShardLayer:
     serializedVersion: 2
     m_Bits: 64
-  FurnitureLayer:
-    serializedVersion: 2
-    m_Bits: 256
   UFOLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -24822,7 +24805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c865af2225fc543b177da8f78de7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {x: 0, y: 0, z: 0}
   leftController: {fileID: 619270400}
   rightController: {fileID: 1960026071}
   glow: {fileID: 2092486093}
@@ -30759,7 +30741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1375612509}
   m_Layer: 0
-  m_Name: Barrel
+  m_Name: PunchStartTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36461,12 +36443,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPunchAction: 67108864
-  shotParticles: {fileID: 835581603}
-  punchTargetTransform: {fileID: 633155787}
-  startTransform: {fileID: 271126324}
-  punchObject: {fileID: 1183153728}
-  punchDistance: 3
+  punchEndTransform: {fileID: 633155787}
+  punchStartTransform: {fileID: 271126324}
+  punchGloveObject: {fileID: 1183153728}
   punchTime: 0.5
+  shotParticles: {fileID: 835581603}
   shootSound: {fileID: 8300000, guid: c2c289c740ba1f54e9a0dc19069d05bf, type: 3}
 --- !u!82 &1682134110
 AudioSource:
@@ -36782,11 +36763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 739691012}
-  boxingSong: {fileID: 8300000, guid: 03a6210e7a586c141bb9e33f3b4537bc, type: 3}
   timerText: {fileID: 759395400}
-  timeRemainingParent: {fileID: 530101811}
-  endGameUI: {fileID: 1489542877}
-  state: 0
 --- !u!1 &1761843617
 GameObject:
   m_ObjectHideFlags: 0
@@ -37338,9 +37315,6 @@ MonoBehaviour:
   ShardLayer:
     serializedVersion: 2
     m_Bits: 64
-  FurnitureLayer:
-    serializedVersion: 2
-    m_Bits: 256
   UFOLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -37370,7 +37344,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8057639354319819834, guid: 4dafebfc89c32d343b8254e9d0b0b7f2, type: 3}
+  - {fileID: 2100000, guid: f2a45c03756b2504089dab238cd57466, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BreakWallTrigger">
+    <Position X="10.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAIiCAAIAAAAAAAAAAABAAMAAAQAAAAAAAABA=</HashCode>
+      <FileName>Assets\Base\Scripts\BreakWallTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletSpawner" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAAAAAgAAAAABAgAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Base\Scripts\BulletSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColliderUtils" Collapsed="true">
+    <Position X="10.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Base\Scripts\ColliderUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyShip" Collapsed="true">
+    <Position X="10.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BKQAACAAACAAIBAAIAEAEAiAEAAAEQIAAARMAAAkAAA=</HashCode>
+      <FileName>Assets\Base\Scripts\EnemyShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySpawner" Collapsed="true">
+    <Position X="10.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCIAIIAAAgAAAAAAAAAAAAAAAAAAAQABAA=</HashCode>
+      <FileName>Assets\Base\Scripts\EnemySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameController">
+    <Position X="8.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACEABAAxCIAAAIgAAASAEIQBAAAAAEAEK4g=</HashCode>
+      <FileName>Assets\Base\Scripts\GameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameplayScoreboard">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="GameplayScoreboard.State" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Base\Scripts\GameplayScoreboard.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAQAAAQAEKAEgQAAIAAIAAFAAAAAAAAEAAAAAAQAAgg=</HashCode>
+      <FileName>Assets\Base\Scripts\GameplayScoreboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvertNormals" Collapsed="true">
+    <Position X="15.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Base\Scripts\InvertNormals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PunchGun" Collapsed="true">
+    <Position X="12.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAACkAQABAAAAAAAAAIAIAEACAAAAAAAAAQAI=</HashCode>
+      <FileName>Assets\Base\Scripts\PunchGun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartBoxingGlove" Collapsed="true">
+    <Position X="12.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAEAAEQAAAAAIAAAAAAAAAAAAAAEAAhQAAAAAAA=</HashCode>
+      <FileName>Assets\Base\Scripts\StartBoxingGlove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NavMeshAgentController" Collapsed="true">
+    <Position X="28.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAQAAAAAAgAAAAAAAAQAAAAAAAQAACAA=</HashCode>
+      <FileName>Assets\Samples\Meta MR Utility Kit\65.0.0\Nav Mesh\NavMeshComponents\ToolkitScripts\NavMeshAgentController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NavMeshSampleController" Collapsed="true">
+    <Position X="30" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Samples\Meta MR Utility Kit\65.0.0\Nav Mesh\Scripts\NavMeshSampleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResizableObjectsList" Collapsed="true">
+    <Position X="26.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABAAAAAAQAAAAQAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Samples\Meta MR Utility Kit\65.0.0\Virtual Home\scripts\Resizer\ResizableObjectsList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BouncingBallLogic" Collapsed="true">
+    <Position X="31.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAABAEQCAIAAAAABQAAIAAAAAAEAAIAAAwBJAAAAQ=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\BouncingBallLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BouncingBallMgr" Collapsed="true">
+    <Position X="33.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAEEAAAAAAAAACAAAAAAAAAAACAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\BouncingBallMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FurnitureSpawner" Collapsed="true">
+    <Position X="26.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIAAAAADCYAAAAAAAAAAAAAgCAAAAAAAAAMAAAAAAA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\FurnitureSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyCustomSceneModelLoader" Collapsed="true">
+    <Position X="26.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\MyCustomSceneModelLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PassthroughPlayInEditor" Collapsed="true">
+    <Position X="33.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\PassthroughPlayInEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RequestCaptureFlow" Collapsed="true">
+    <Position X="24.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\RequestCaptureFlow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleResizable" Collapsed="true">
+    <Position X="31.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAFAEAAAAIAAKAAAAAAAAAAAACAAABFCwBABAAAiEA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\SimpleResizer\SimpleResizable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleResizer" Collapsed="true">
+    <Position X="33.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAACAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\SimpleResizer\SimpleResizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Spawnable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAACAAAAAABAAAACAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\Spawnable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SpawnableEditor" Collapsed="true">
+    <Position X="28.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\Spawnable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VolumeAndPlaneSwitcher" Collapsed="true">
+    <Position X="24.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAQAAAAASAAAAAgAAAAAAACAIA=</HashCode>
+      <FileName>Assets\Samples\Meta XR Simulator Samples\65.0.0\Usage Assets\SceneManager\Scripts\VolumeAndPlaneSwitcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AssetStoreLink" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Examples\Scripts\AssetStoreLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestPageSwitch" Collapsed="true">
+    <Position X="35.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Examples\Scripts\TestPageSwitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestSwitchBar" Collapsed="true">
+    <Position X="19.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAQoACAAAkAAAAAAEAAAAAAIAAABAAAAAEwAAAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Examples\Scripts\TestSwitchBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgressBarPro" Collapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQIAAAAACQABkgEAgEEEAACIAQAADAAAAAgAAIACCQ=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\ProgressBarPro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelfRotation" Collapsed="true">
+    <Position X="28.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SimpleToon\Scripts\SelfRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChatController" Collapsed="true">
+    <Position X="26.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAICEAAAAAACAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DropdownSample" Collapsed="true">
+    <Position X="31.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAIIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnvMapAnimator" Collapsed="true">
+    <Position X="24.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAAAAAAAAAgAAAAAAQAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Readme" Collapsed="true">
+    <Position X="23" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\TutorialInfo\Scripts\Readme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytesized.AutoDestruct" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAYA=</HashCode>
+      <FileName>Assets\Fracturer\Demo\Scripts\AutoDestruct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytesized.Gun" Collapsed="true">
+    <Position X="31.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIIAAAAAAAAAAAABAgAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Demo\Scripts\Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytesized.SmoothMouse" Collapsed="true">
+    <Position X="24.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAkACAAAAAAAC2IAAAACIACAAAAEACAADAEABQ=</HashCode>
+      <FileName>Assets\Fracturer\Demo\Scripts\SmoothMouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bytesized.BreakableWall" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAAAAAAACCAgABAAAAAEAAAAAAAAIAAABAAAAAACAA=</HashCode>
+      <FileName>Assets\Fracturer\Scripts\BreakableWall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.Edge" Collapsed="true">
+    <Position X="33.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAEBQBFKCBgACEAAAAARAAgAAAAUCoIQgKAgAIBAI=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\Edge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.EdgeList" Collapsed="true">
+    <Position X="35.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAAIEBIACAAAAACAAAABIAAAAAAAAACAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\EdgeList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.EdgeReorderer" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiAAAAKAAAAAAAAAAAAAAABAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\EdgeReorderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.Halfedge" Collapsed="true">
+    <Position X="33.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAACiAQAAAEARAAAAAAAAAAAUAQAAwCAAAAAAI=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\Halfedge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.HalfedgePriorityQueue" Collapsed="true">
+    <Position X="35.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAEAAACAAABACFAIABIgAAAAAAAgAAAACAEAIAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\HalfedgePriorityQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.LR" Collapsed="true">
+    <Position X="24.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAgAEAAAAAAAAAAAEAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\LR.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.Site" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgQAAgKAAAAQECAAAAIwACBDCAEEAYAhiEABAggA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\Site.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="csDelaunay.BoundsCheck" Collapsed="true">
+    <Position X="35.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAgAAABAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\Site.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.SiteList" Collapsed="true">
+    <Position X="21.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAAQAABCAAFACAAAAAAAQAIAABIAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\SiteList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.Triangle" Collapsed="true">
+    <Position X="28.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.Vertex" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADAAAAAEAAEEAAAAAAFAAEAAQAhiAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\Vertex.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="csDelaunay.Voronoi" Collapsed="true">
+    <Position X="26.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAgQAAhKAAJAACAAABAYEAAQgBAEIAAJACAEAgBAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\Voronoi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.Circle" Collapsed="true">
+    <Position X="28.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Geom\Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.LineSegment" Collapsed="true">
+    <Position X="23" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAABAEAAAAAAgAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Geom\LineSegment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="csDelaunay.Polygon" Collapsed="true">
+    <Position X="35.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAABABAAQAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Geom\Polygon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.TestBarControl" Collapsed="true">
+    <Position X="33.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAAAQAIAAQAAAIAAQAQAAAAAiEAAAAIAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Examples\Scripts\TestBarControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewColor" Collapsed="true">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQABEoAADAAAACMAkAAAAAAAAIQECBACAFAYCAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewColorWhileMoving" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQAAEAABBQAAAAMAAAAAAAAAAAAAAAABAAAAaAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewColorWhileMoving.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewPosAnchors" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewPosAnchors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewPosImageFill" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADBAQAACAAABAAAEAAAAAAAAAAAgAAAAAAAAAAQAAE=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewPosImageFill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewScale" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQACEAACBAAAAAECAACAgAAAIAQAAAAAAEAADAE=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewScale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewSizeAnchors" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAAAAAABAEIEAAACAEAAABAAAAIABAAAAAAEAg=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewSizeAnchors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewSizeAnchorsShadow" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewSizeAnchorsShadow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewSizeImageFill" Collapsed="true">
+    <Position X="14.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAABAAIAAAACAMAEAAAAAAAABAAAAAAAAg=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewSizeImageFill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.BarViewValueText" Collapsed="true">
+    <Position X="17" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAQIAAAAABAAAEAAIAAMAgAAAAiBIEAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\BarViewValueText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.ProgressBar.ProgressBarProView" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAABAAAAAAAEAEAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\ProgressBarProView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.UI.ImageSlicedMirror" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAigAAEAABAAAAAAAAAABAIAAAAAAAAAEAAAAAAAAE=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\Utils\ImageSlicedMirror.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sharklib.Utils" Collapsed="true">
+    <Position X="30" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Sharklib\ProgressBar\Scripts\Utils\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityStandardAssets.Cameras.AbstractTargetFollower" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAACAqAAABAAAAAAICAAAAAAAUAAAABAAAAAAAI=</HashCode>
+      <FileName>Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\AbstractTargetFollower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityStandardAssets.Cameras.FreeLookCam" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAEAEAIQBAAAmAAAAAAIAAAAAAIAJAAAAAAACAGA=</HashCode>
+      <FileName>Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\FreeLookCam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityStandardAssets.Cameras.PivotBasedCameraRig" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAgAAAAAAAABAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\PivotBasedCameraRig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark01" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAIAACAAAAAAAAQAAAAIAAQAAAAAgAABAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark01_UGUI" Collapsed="true">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAACAAAAAAAAQAAAAKAAQAAAAAgAABAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark02" Collapsed="true">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAEAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark03" Collapsed="true">
+    <Position X="28.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.Benchmark04" Collapsed="true">
+    <Position X="30" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAIACAAAAAAAAAAAAAAAAAAAAAAAQAAAAABAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.CameraController" Collapsed="true">
+    <Position X="24.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAEAAEADAEBEAgAIQAIEABAAAFgYQQACAAAAAAIEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.ObjectSpin" Collapsed="true">
+    <Position X="31.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAEAIAAAAAAAAAAAAQAAAEABAIAgAAAAAAQBAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.ShaderPropAnimator" Collapsed="true">
+    <Position X="30" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAAAAAAAAAgAEAAAAAAAAAAAAAAAQAgAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.SimpleScript" Collapsed="true">
+    <Position X="35.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAABAAAAAAAEAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.SkewTextExample" Collapsed="true">
+    <Position X="23" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAACAAAAAAAAAAAAAABAEAAAAAIAAAAAACAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TeleType" Collapsed="true">
+    <Position X="31.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TextConsoleSimulator" Collapsed="true">
+    <Position X="21.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACAAAAAAAAAAAAAABAAAAAAIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TextMeshProFloatingText" Collapsed="true">
+    <Position X="23" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACICAJACAAAAAAAAAAAAAJAAQAQAAAAABAACAACEI=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TextMeshSpawner" Collapsed="true">
+    <Position X="24.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAEAAAAAAABAAAAAAAAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_ExampleScript_01" Collapsed="true">
+    <Position X="28.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAIBAAAAAAAAAAACAAAAIAAAAAAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_FrameRateCounter" Collapsed="true">
+    <Position X="30" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoQAAAAAACAAAIgAAAAgAIAAAgQAAAAAAAAAAAAAAEg=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_TextEventCheck" Collapsed="true">
+    <Position X="33.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEJAAAAAAACCAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_TextInfoDebugTool" Collapsed="true">
+    <Position X="19.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIEAAIYACACAAAggAAQAAAAoABKAAEAAACAgQACgAI=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMP_TextSelector_A" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAIAAAAAQoAAAAAAAAAQAAAWA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TMPro.Examples.TMP_TextSelector_B" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKAAABBGgAAAIAQAQAAIAAIgAQoAABIAEAAAQAACEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TMPro.Examples.TMP_UiFrameRateCounter" Collapsed="true">
+    <Position X="24.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoQAAAAAACAAAAgAAAAgAIAAAgQAAAAAAAAAAAAAAEg=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.TMPro_InstructionOverlay" Collapsed="true">
+    <Position X="26.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAIAAAAAAIgAAAAgAAAAAAQAAAAACAAAAAAAAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexColorCycler" Collapsed="true">
+    <Position X="33.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexJitter" Collapsed="true">
+    <Position X="35.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexShakeA" Collapsed="true">
+    <Position X="19.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAACAAAFAACAAAAAAAgIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexShakeB" Collapsed="true">
+    <Position X="21.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.VertexZoom" Collapsed="true">
+    <Position X="23" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.Examples.WarpTextExample" Collapsed="true">
+    <Position X="28.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAACAAAAAAAAAFAAAABAAAAAAAIAAAAAACAEA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.TMP_DigitValidator" Collapsed="true">
+    <Position X="26.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.TMP_PhoneNumberValidator" Collapsed="true">
+    <Position X="31.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMPro.TMP_TextEventHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgAEEAAAAAMABAAEAIEAIAUApAAAAAAAAAYACBWE=</HashCode>
+      <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="Rectf" Collapsed="true">
+    <Position X="19.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAABQAQAABAAgAAAAIAAAAAABgAAIAkAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Geom\Rectf.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Vector2f" Collapsed="true">
+    <Position X="21.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAACBACAAAE8AEBAAAAAAAIAIAAAQBgAgAAgiA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Geom\Vector2f.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="csDelaunay.ICoord" Collapsed="true">
+    <Position X="19.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Delaunay\ICoord.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="csDelaunay.Winding" Collapsed="true">
+    <Position X="19.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAQAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Fracturer\Plugins\Voronoi\Geom\Winding.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,12 +1,10 @@
 using UnityEngine;
 
-public class BreakWallTrigger : MonoBehaviour
+[RequireComponent(typeof(AudioSource))]
+public class Collide_Wall : MonoBehaviour
 {
-    public LayerMask ShardLayer;
-    public LayerMask UFOLayer;
-    public LayerMask PunchGloveLayer;
     public ParticleSystem wallExplodePrefab;
-    public float ExplosionForce = 100.0f;
+    float ExplosionForce = 1000.0f;
     bool isExploding = false;
     float explodeTime = 0.5f;
     float explodeTimer;
@@ -15,10 +13,6 @@ public class BreakWallTrigger : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if(audioSource == null )
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
     }
 
     private void FixedUpdate()
@@ -35,7 +29,7 @@ public class BreakWallTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         int layer = other.gameObject.layer;
-        if (layer == ColliderUtils.LayerMaskToLayer(ShardLayer))
+        if(ColliderController.Instance.HitWall(layer))
         {
             Rigidbody body = other.GetComponent<Rigidbody>();
             if (body != null)
@@ -58,11 +52,6 @@ public class BreakWallTrigger : MonoBehaviour
                     }
                 }
             }
-        }
-        if (layer == ColliderUtils.LayerMaskToLayer(UFOLayer) && transform.gameObject.layer == ColliderUtils.LayerMaskToLayer(PunchGloveLayer))
-        {
-            other.GetComponent<EnemyShip>().Explode();
-        }
-        
+        }        
     }
 }

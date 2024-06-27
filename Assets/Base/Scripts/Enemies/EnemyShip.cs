@@ -14,6 +14,7 @@ public class EnemyShip : MonoBehaviour
     public ParticleSystem endGameParticles;
     public AudioClip hitSound;
     AudioSource audioSource;
+    bool hasExploded = false;
     private enum State
     {
         FlyingToTarget,
@@ -98,6 +99,10 @@ public class EnemyShip : MonoBehaviour
     }
     public void Explode()
     {
+        if (hasExploded) {
+            return;
+        }
+        hasExploded = true;
         audioSource.PlayOneShot(hitSound);
         explodeParticles.gameObject.SetActive(true);
         explodeParticles.Play();

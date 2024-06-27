@@ -3,21 +3,14 @@ using UnityEngine;
 [RequireComponent (typeof(AudioSource))]
 public class PunchGun : MonoBehaviour
 {
-    [SerializeField]
-    private OVRInput.RawButton shootPunchAction;
-    [SerializeField]
-    private Transform punchEndTransform;
-    [SerializeField]
-    private Transform punchStartTransform;
-    [SerializeField]
-    private Transform punchGloveObject;
-    [SerializeField]
-    private float punchTime = 0.5f;
+    [SerializeField] private OVRInput.RawButton shootPunchAction;
+    [SerializeField] private Transform punchEndTransform;
+    [SerializeField] private Transform punchStartTransform;
+    [SerializeField] private Transform punchGloveObject;
+    [SerializeField] private float punchTime = 0.5f;
 
-    [SerializeField]
-    private ParticleSystem shotParticles;
-    [SerializeField]
-    private AudioClip shootSound;
+    [SerializeField] private ParticleSystem shotParticles;
+    [SerializeField] private AudioClip shootSound;
 
     private AudioSource audioSource;
     private bool isPunching = false;

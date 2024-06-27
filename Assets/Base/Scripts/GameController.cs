@@ -117,7 +117,6 @@ public class GameController : Singleton<GameController>
     }
     void UpdateHitGlove()
     {
-
     }
     public void StartBoxing()
     {
@@ -172,7 +171,6 @@ public class GameController : Singleton<GameController>
 
     private void Finished()
     {
-
     }
 
     #endregion

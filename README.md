@@ -3,7 +3,7 @@
 Welcome to **Space Brawler**, an immersive VR experience where you take on UFOs with a punch cannon! Available on Oculus Quest 3, this action-packed game brings the excitement of space boxing right into your room!
 
 <a id="spaceBrawlerGif" href="https://youtu.be/Eb4wPB49fUk?si=b15C4f5yGYqhfC99">
-    <img src="https://github.com/HeyJoeLang/SpaceBrawler/blob/master/ReadmeResources/SpaceBrawlerGif.gif" alt="Space Brawler gif" title="Space Brawler gif" width="500"/>
+    <img src="https://github.com/HeyJoeLang/SpaceBrawler/blob/main/ReadmeResources/SpaceBrawlerGif.gif" alt="Space Brawler gif" title="Space Brawler gif" width="602"/>
 </a>
 
 ## Game Overview

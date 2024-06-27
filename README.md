@@ -1,5 +1,3 @@
-# SpaceBrawler
- 
 # Space Brawler
 
 Welcome to **Space Brawler**, an immersive VR experience where you take on UFOs with a punch cannon! Available on Oculus Quest 3, this action-packed game brings the excitement of space boxing right into your room.

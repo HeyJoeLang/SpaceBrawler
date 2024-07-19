@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class Collide_UFO : MonoBehaviour
+namespace heyjoelang
 {
-    private void OnTriggerEnter(Collider other)
+    public class Collide_UFO : MonoBehaviour
     {
-        if(ColliderController.Instance.HitUFO(other.gameObject.layer))
+        private void OnTriggerEnter(Collider other)
         {
-            Debug.LogFormat("{0} hit {1}", gameObject.name, other.gameObject.name);
-            other.GetComponent<EnemyShip>().Explode();
+            if (ColliderController.Instance.HitUFO(other.gameObject.layer))
+            {
+                Debug.LogFormat("{0} hit {1}", gameObject.name, other.gameObject.name);
+                other.GetComponent<EnemyShip>().Explode();
+            }
         }
     }
 }

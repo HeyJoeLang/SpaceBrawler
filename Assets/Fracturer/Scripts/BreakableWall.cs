@@ -154,7 +154,7 @@ namespace Bytesized
 			shard.transform.localPosition = Vector3.zero;
 			shard.transform.localRotation = Quaternion.identity;
 			shard.transform.localScale = Vector3.one;
-			shard.layer = ColliderController.LayerMaskToLayer(ShardLayer);
+			shard.layer = heyjoelang.ColliderController.LayerMaskToLayer(ShardLayer);
 			shard.AddComponent<MeshCollider>();
 			shard.AddComponent<MeshFilter>();
 			shard.AddComponent<MeshRenderer>();

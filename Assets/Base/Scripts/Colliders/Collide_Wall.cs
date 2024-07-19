@@ -1,57 +1,60 @@
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
-public class Collide_Wall : MonoBehaviour
+namespace heyjoelang
 {
-    public ParticleSystem wallExplodePrefab;
-    float ExplosionForce = 1000.0f;
-    bool isExploding = false;
-    float explodeTime = 0.5f;
-    float explodeTimer;
-    public AudioClip hitWallClip;
-    AudioSource audioSource;
-    private void Start()
+    [RequireComponent(typeof(AudioSource))]
+    public class Collide_Wall : MonoBehaviour
     {
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    private void FixedUpdate()
-    {
-        if(isExploding)
+        public ParticleSystem wallExplodePrefab;
+        float ExplosionForce = 1000.0f;
+        bool isExploding = false;
+        float explodeTime = 0.5f;
+        float explodeTimer;
+        public AudioClip hitWallClip;
+        AudioSource audioSource;
+        private void Start()
         {
-            explodeTimer -= Time.deltaTime;
-            if(explodeTimer <= 0 ) 
+            audioSource = GetComponent<AudioSource>();
+        }
+
+        private void FixedUpdate()
+        {
+            if (isExploding)
             {
-                isExploding = false;
+                explodeTimer -= Time.deltaTime;
+                if (explodeTimer <= 0)
+                {
+                    isExploding = false;
+                }
             }
         }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        int layer = other.gameObject.layer;
-        if(ColliderController.Instance.HitWall(layer))
+        private void OnTriggerEnter(Collider other)
         {
-            Rigidbody body = other.GetComponent<Rigidbody>();
-            if (body != null)
+            int layer = other.gameObject.layer;
+            if (ColliderController.Instance.HitWall(layer))
             {
-                if (body.isKinematic)
+                Rigidbody body = other.GetComponent<Rigidbody>();
+                if (body != null)
                 {
-                    body.isKinematic = false;
-                    body.AddExplosionForce(ExplosionForce, transform.position, 1.0f);
-                    Destroy(body, 2.0f);
-                    if (isExploding == false)
+                    if (body.isKinematic)
                     {
-                        if(hitWallClip != null)
+                        body.isKinematic = false;
+                        body.AddExplosionForce(ExplosionForce, transform.position, 1.0f);
+                        Destroy(body, 2.0f);
+                        if (isExploding == false)
                         {
-                            audioSource.PlayOneShot(hitWallClip);
+                            if (hitWallClip != null)
+                            {
+                                audioSource.PlayOneShot(hitWallClip);
+                            }
+                            wallExplodePrefab.gameObject.SetActive(true);
+                            isExploding = true;
+                            explodeTimer = explodeTime;
+                            wallExplodePrefab.Play();
                         }
-                        wallExplodePrefab.gameObject.SetActive(true);
-                        isExploding = true;
-                        explodeTimer = explodeTime;
-                        wallExplodePrefab.Play();
                     }
                 }
             }
-        }        
+        }
     }
 }

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hide
+  m_Name: MR_InvisibilityCloak
   m_Shader: {fileID: 4800000, guid: b44b59ba9b32866448fa48f35f8a32b0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0

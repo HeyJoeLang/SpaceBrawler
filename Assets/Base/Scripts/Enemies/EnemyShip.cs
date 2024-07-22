@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 namespace heyjoelang
@@ -17,7 +18,13 @@ namespace heyjoelang
         public AudioClip hitSound;
         AudioSource audioSource;
         bool hasExploded = false;
-        private enum State
+        private float stallDestroyTime;
+        public float GetStallDestroyTime()
+        {
+            return stallDestroyTime;
+        }
+
+        public enum State_EnemyShip
         {
             FlyingToTarget,
             Wandering,
@@ -25,7 +32,7 @@ namespace heyjoelang
         }
 
         [SerializeField]
-        private State currentState;
+        private State_EnemyShip currentState;
         private float wanderTime;
         private Vector3 wanderTarget;
 
@@ -35,18 +42,20 @@ namespace heyjoelang
         void Start()
         {
             audioSource = GetComponent<AudioSource>();
-            currentState = State.FlyingToTarget;
-            target = Camera.main.transform;
+            currentState = State_EnemyShip.FlyingToTarget;
+            target = Camera.main != null ? Camera.main.transform : null;
         }
 
         void Update()
         {
+            if (target == null) return;
+
             switch (currentState)
             {
-                case State.FlyingToTarget:
+                case State_EnemyShip.FlyingToTarget:
                     FlyToTarget();
                     break;
-                case State.Wandering:
+                case State_EnemyShip.Wandering:
                     WanderAround();
                     break;
             }
@@ -55,17 +64,22 @@ namespace heyjoelang
 
         private void FlyToTarget()
         {
+            if (target == null) return;
+
             Vector3 direction = (target.position - transform.position).normalized;
             transform.position += direction * speed * Time.deltaTime;
 
             if (Vector3.Distance(transform.position, target.position) < minWanderRadius)
             {
-                currentState = State.Wandering;
+                currentState = State_EnemyShip.Wandering;
                 SetNewWanderTarget();
             }
         }
+
         private void WanderAround()
         {
+            if (target == null) return;
+
             float lerpSpeed = speed * Time.deltaTime;
             transform.position = Vector3.Slerp(transform.position, wanderTarget, lerpSpeed);
             if (Vector3.Distance(transform.position, wanderTarget) < .1f)
@@ -73,31 +87,61 @@ namespace heyjoelang
                 SetNewWanderTarget();
             }
         }
+
         public void EndGameExplode()
         {
             StartCoroutine(StallEndGameExplosion());
         }
+
         IEnumerator StallEndGameExplosion()
         {
-            yield return new WaitForSeconds(Random.Range(0f, 2f));
+            stallDestroyTime = Random.Range(0f, 2f);
+            yield return new WaitForSeconds(stallDestroyTime);
             endGameParticles.gameObject.SetActive(true);
             endGameParticles.Play();
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<MeshCollider>().enabled = false;
             Destroy(gameObject, 1f);
         }
+
         private void SetNewWanderTarget()
         {
+            if (target == null) return;
+
             if (Vector3.Distance(transform.position, target.position) > maxWanderRadius)
             {
-                currentState = State.FlyingToTarget;
+                currentState = State_EnemyShip.FlyingToTarget;
             }
             Vector3 newWanderPosition = transform.position + Random.insideUnitSphere * wanderRadius;
             if (newWanderPosition.y < 0)
             {
                 newWanderPosition.y = Mathf.Abs(newWanderPosition.y);
             }
-    ; wanderTarget = newWanderPosition;
+            wanderTarget = newWanderPosition;
+        }
+
+        public State_EnemyShip GetEnemyShipState()
+        {
+            return currentState;
+        }
+
+        public void SetEnemyShipState(State_EnemyShip sate)
+        {
+            currentState = sate;
+        }
+
+        public Transform GetTarget()
+        {
+            if (target == null)
+            {
+                Debug.LogError("No Target assigned yet attempting to be retrieved");
+            }
+            return target;
+        }
+
+        public void SetTarget(Transform value)
+        {
+            target = value;
         }
         public void Explode()
         {
@@ -106,13 +150,30 @@ namespace heyjoelang
                 return;
             }
             hasExploded = true;
-            audioSource.PlayOneShot(hitSound);
-            explodeParticles.gameObject.SetActive(true);
-            explodeParticles.Play();
+            if (audioSource != null && hitSound != null)
+            {
+                audioSource.PlayOneShot(hitSound);
+            }
+            if (explodeParticles != null)
+            {
+                explodeParticles.gameObject.SetActive(true);
+                explodeParticles.Play();
+            }
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<MeshCollider>().enabled = false;
+            Debug.Log("MeshRenderer and MeshCollider are disabled");
+
+            if (GameplayScoreboard.Instance != null)
+            {
+                GameplayScoreboard.Instance.IncreaseScore();
+                Debug.Log("GameplayScoreboard score increased");
+            }
+            else
+            {
+                Debug.LogError("GameplayScoreboard instance is null");
+            }
+
             Destroy(gameObject, 2);
-            GameplayScoreboard.Instance.IncreaseScore();
         }
     }
 }

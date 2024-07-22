@@ -66,6 +66,7 @@ namespace heyjoelang
             audioSource.loop = true;
             audioSource.playOnAwake = true;
             audioSource.clip = menuBackgroundMusic;
+            GameplayScoreboard.Instance.ResetScore();
         }
 
         void OnEnable()
